@@ -1,0 +1,3 @@
+﻿  client.cpp
+d:\IBKS\3 year\5 semester\BSIT\Labs\Lab 02\Client\Client\client.cpp(42,11): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
+  Client.vcxproj -> D:\IBKS\3 year\5 semester\BSIT\Labs\Lab 02\Client\Debug\Client.exe

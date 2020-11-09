@@ -1,0 +1,37 @@
+[
+	uuid(0f3fc7a7-cb51-437d-8a37-edecd921fdd3),
+	version(1.0),
+	implicit_handle(handle_t InterfaceHandle)
+]
+
+interface Interface
+{
+
+int serv_login(
+	[in, string] const wchar_t* login,
+	[in, string] const wchar_t* password
+);
+
+int serv_remove(
+	[in, string] const char* path_file
+);
+
+int serv_download(
+	[in, string] const char* path_from,
+	[out, size_is(buffer_size)] char* buffer,
+	[in] int buffer_size
+);
+
+int serv_upload(
+	[in, string] const char* path_to,
+	[in, size_is(buffer_size)] const char* buffer,
+	[in] int buffer_size
+);
+
+
+int serv_get_file_size(
+	[in, string] const char* path_file
+);
+
+
+}

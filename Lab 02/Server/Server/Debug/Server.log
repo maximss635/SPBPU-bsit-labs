@@ -1,0 +1,4 @@
+﻿  server.cpp
+d:\IBKS\3 year\5 semester\BSIT\Labs\Lab 02\Server\Server\server.cpp(108,16): warning C4018: <: несоответствие типов со знаком и без знака
+d:\IBKS\3 year\5 semester\BSIT\Labs\Lab 02\Server\Server\server.cpp(114,16): warning C4018: <: несоответствие типов со знаком и без знака
+  Server.vcxproj -> D:\IBKS\3 year\5 semester\BSIT\Labs\Lab 02\Server\Debug\Server.exe
