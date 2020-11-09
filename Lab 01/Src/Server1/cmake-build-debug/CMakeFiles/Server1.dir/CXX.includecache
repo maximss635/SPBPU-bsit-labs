@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/IBKS/3 year/5 semester/BSIT/Labs/Lab 01/Src/Server1/Server.cpp
+Server.h
+D:/IBKS/3 year/5 semester/BSIT/Labs/Lab 01/Src/Server1/Server.h
+VersionHelpers.h
+-
+cassert
+-
+sddl.h
+-
+
+D:/IBKS/3 year/5 semester/BSIT/Labs/Lab 01/Src/Server1/Server.h
+windows.h
+-
+winsock2.h
+-
+mswsock.h
+-
+cstdio
+-
+cstdlib
+-
+Wincrypt.h
+-
+aclapi.h
+-
+

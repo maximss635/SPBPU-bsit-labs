@@ -1,0 +1,3 @@
+D:/IBKS/3 year/5 semester/BSIT/Labs/Lab 01/Src/Client1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/IBKS/3 year/5 semester/BSIT/Labs/Lab 01/Src/Client1/cmake-build-debug/CMakeFiles/Client1.dir
+D:/IBKS/3 year/5 semester/BSIT/Labs/Lab 01/Src/Client1/cmake-build-debug/CMakeFiles/edit_cache.dir
