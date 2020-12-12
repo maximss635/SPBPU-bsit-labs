@@ -35,7 +35,7 @@
 #include "AppInterface.h"
 
 #define TYPE_FORMAT_STRING_SIZE   23                                
-#define PROC_FORMAT_STRING_SIZE   331                               
+#define PROC_FORMAT_STRING_SIZE   343                               
 #define EXPR_FORMAT_STRING_SIZE   1                                 
 #define TRANSMIT_AS_TABLE_SIZE    0            
 #define WIRE_MARSHAL_TABLE_SIZE   0            
@@ -330,11 +330,11 @@ static const AppInterface_MIDL_PROC_FORMAT_STRING AppInterface__MIDL_ProcFormatS
 			0x48,		/* Old Flags:  */
 /* 260 */	NdrFcLong( 0x0 ),	/* 0 */
 /* 264 */	NdrFcShort( 0x7 ),	/* 7 */
-/* 266 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
+/* 266 */	NdrFcShort( 0xc ),	/* x86 Stack size/offset = 12 */
 /* 268 */	NdrFcShort( 0x8 ),	/* 8 */
 /* 270 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 272 */	0x41,		/* Oi2 Flags:  srv must size, has ext, */
-			0x2,		/* 2 */
+/* 272 */	0x43,		/* Oi2 Flags:  srv must size, clt must size, has ext, */
+			0x3,		/* 3 */
 /* 274 */	0x8,		/* 8 */
 			0x3,		/* Ext Flags:  new corr desc, clt corr check, */
 /* 276 */	NdrFcShort( 0x1 ),	/* 1 */
@@ -354,35 +354,47 @@ static const AppInterface_MIDL_PROC_FORMAT_STRING AppInterface__MIDL_ProcFormatS
 /* 290 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
 /* 292 */	NdrFcShort( 0xa ),	/* Type Offset=10 */
 
+	/* Parameter path */
+
+/* 294 */	NdrFcShort( 0x10b ),	/* Flags:  must size, must free, in, simple ref, */
+/* 296 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
+/* 298 */	NdrFcShort( 0x4 ),	/* Type Offset=4 */
+
 	/* Procedure serv_file_access_right */
 
-/* 294 */	0x32,		/* FC_BIND_PRIMITIVE */
+/* 300 */	0x32,		/* FC_BIND_PRIMITIVE */
 			0x48,		/* Old Flags:  */
-/* 296 */	NdrFcLong( 0x0 ),	/* 0 */
-/* 300 */	NdrFcShort( 0x8 ),	/* 8 */
-/* 302 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
-/* 304 */	NdrFcShort( 0x8 ),	/* 8 */
-/* 306 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 308 */	0x41,		/* Oi2 Flags:  srv must size, has ext, */
-			0x2,		/* 2 */
-/* 310 */	0x8,		/* 8 */
+/* 302 */	NdrFcLong( 0x0 ),	/* 0 */
+/* 306 */	NdrFcShort( 0x8 ),	/* 8 */
+/* 308 */	NdrFcShort( 0xc ),	/* x86 Stack size/offset = 12 */
+/* 310 */	NdrFcShort( 0x8 ),	/* 8 */
+/* 312 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 314 */	0x43,		/* Oi2 Flags:  srv must size, clt must size, has ext, */
+			0x3,		/* 3 */
+/* 316 */	0x8,		/* 8 */
 			0x3,		/* Ext Flags:  new corr desc, clt corr check, */
-/* 312 */	NdrFcShort( 0x1 ),	/* 1 */
-/* 314 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 316 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 318 */	NdrFcShort( 0x1 ),	/* 1 */
+/* 320 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 322 */	NdrFcShort( 0x0 ),	/* 0 */
 
 	/* Parameter buffer_size */
 
-/* 318 */	NdrFcShort( 0x48 ),	/* Flags:  in, base type, */
-/* 320 */	NdrFcShort( 0x0 ),	/* x86 Stack size/offset = 0 */
-/* 322 */	0x8,		/* FC_LONG */
+/* 324 */	NdrFcShort( 0x48 ),	/* Flags:  in, base type, */
+/* 326 */	NdrFcShort( 0x0 ),	/* x86 Stack size/offset = 0 */
+/* 328 */	0x8,		/* FC_LONG */
 			0x0,		/* 0 */
 
 	/* Parameter buffer */
 
-/* 324 */	NdrFcShort( 0x113 ),	/* Flags:  must size, must free, out, simple ref, */
-/* 326 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 328 */	NdrFcShort( 0xa ),	/* Type Offset=10 */
+/* 330 */	NdrFcShort( 0x113 ),	/* Flags:  must size, must free, out, simple ref, */
+/* 332 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
+/* 334 */	NdrFcShort( 0xa ),	/* Type Offset=10 */
+
+	/* Parameter path */
+
+/* 336 */	NdrFcShort( 0x10b ),	/* Flags:  must size, must free, in, simple ref, */
+/* 338 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
+/* 340 */	NdrFcShort( 0x4 ),	/* Type Offset=4 */
 
 			0x0
         }
@@ -426,7 +438,7 @@ static const unsigned short Interface_FormatStringOffsetTable[] =
     186,
     222,
     258,
-    294
+    300
     };
 
 

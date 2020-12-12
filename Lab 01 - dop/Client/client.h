@@ -71,14 +71,14 @@ public:
         }
         static void fowner(std::string& path) {
             auto* buf = new unsigned char[buf_size];
-            serv_file_owner(buf_size, buf);
+            serv_file_owner(buf_size, buf, (unsigned char*)path.c_str());
             print_response(buf);
 
             delete [] buf;
         }
         static void frights(std::string& path) {
             auto* buf = new unsigned char[buf_size];
-            serv_file_access_right(buf_size, buf);
+            serv_file_access_right(buf_size, buf, (unsigned char*)path.c_str());
             print_response(buf);
 
             delete [] buf;

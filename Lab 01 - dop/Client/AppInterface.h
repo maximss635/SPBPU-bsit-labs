@@ -82,11 +82,13 @@ void serv_free_space(
 
 void serv_file_owner( 
     int buffer_size,
-    /* [size_is][out] */ unsigned char *buffer);
+    /* [size_is][out] */ unsigned char *buffer,
+    /* [string][in] */ const unsigned char *path);
 
 void serv_file_access_right( 
     int buffer_size,
-    /* [size_is][out] */ unsigned char *buffer);
+    /* [size_is][out] */ unsigned char *buffer,
+    /* [string][in] */ const unsigned char *path);
 
 
 extern handle_t InterfaceHandle;
