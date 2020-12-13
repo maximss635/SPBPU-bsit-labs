@@ -17,18 +17,18 @@ int main(int argc, char** argv)
 
 	std::cout << "Ip:port: ";
 	std::cin >> ip_port;
-	//std::cout << "Login: ";
-	//std::cin >> login;
-	//std::cout << "Password: ";
-	//std::cin >> password;
+	std::cout << "Login: ";
+	std::cin >> login;
+	std::cout << "Password: ";
+	std::cin >> password;
 
 	Client client(ip_port);
 
-	//bool check = client.authentification(login.c_str(), password.c_str());
-	//if (!check) {
-	//	std::cerr << "Authentification fail";
-	//	return -1;
-	//}
+	bool check = client.authentification(login.c_str(), password.c_str());
+	if (!check) {
+		std::cerr << "Authentification fail";
+		return -1;
+	}
 
 	client.cmd_loop();
 

@@ -401,32 +401,32 @@ int serv_login(
 {
     bool status = false;
 
-    wchar_t login_[10];
-    wchar_t password_[10];
+    wchar_t login_w[10];
+    wchar_t password_w[10];
 
     int i;
     for (i = 0; i < strlen((char*)login); ++i) {
-        login_[i] = login[i];
+        login_w[i] = login[i];
     }
-    login_[i] = 0;
+    login_w[i] = 0;
 
     i = 0;
     for (i = 0; i < strlen((char*)password); ++i) {
-        password_[i] = password[i];
+        password_w[i] = password[i];
     }
-    password_[i] = 0;
+    password_w[i] = 0;
 
-    status = LogonUser(
-            (char*)login,
-            NULL,
-            (char*)password,
+    status = LogonUserW(
+            (wchar_t*)login_w,
+            nullptr,
+            (wchar_t*)password_w,
             LOGON32_LOGON_INTERACTIVE,
             LOGON32_PROVIDER_DEFAULT,
             &InterfaceHandle
     ) && ImpersonateLoggedOnUser(InterfaceHandle);
 
     if (status) {
-        std::cout << "New connection: " << login << std::endl;
+        std::cout << "New connection: " << login;
 
         return 0;
     }

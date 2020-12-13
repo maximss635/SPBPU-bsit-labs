@@ -29,38 +29,38 @@ Client::~Client() {
 
 bool Client::authentification(const char* login, const  char* password)
 {
-	// Filling up identity struct
-	SEC_WINNT_AUTH_IDENTITY_A sec;
-	sec.Domain = (unsigned char*)"";
-	sec.DomainLength = 0;
-	sec.Flags = SEC_WINNT_AUTH_IDENTITY_ANSI;
-	sec.Password = (unsigned char*)password;
-	sec.PasswordLength = strlen(password);
-	sec.User = (unsigned char*)login;
-	sec.UserLength = strlen(login);
+    // Filling up identity struct
+    SEC_WINNT_AUTH_IDENTITY_A sec;
+    sec.Domain = (unsigned char*)"";
+    sec.DomainLength = 0;
+    sec.Flags = SEC_WINNT_AUTH_IDENTITY_ANSI;
+    sec.Password = (unsigned char*)password;
+    sec.PasswordLength = strlen(password);
+    sec.User = (unsigned char*)login;
+    sec.UserLength = strlen(login);
 
-	RpcBindingSetAuthInfo(
-		InterfaceHandle,
-		nullptr,
-		RPC_C_AUTHN_LEVEL_PKT_PRIVACY,
-		RPC_C_AUTHN_WINNT,
-		(RPC_AUTH_IDENTITY_HANDLE)&sec,
-		0
-	);
+    RpcBindingSetAuthInfo(
+            InterfaceHandle,
+            nullptr,
+            RPC_C_AUTHN_LEVEL_PKT_PRIVACY,
+            RPC_C_AUTHN_WINNT,
+            (RPC_AUTH_IDENTITY_HANDLE)&sec,
+            0
+    );
 
-	int check = serv_login((unsigned char*)login, (unsigned char*)password);
-	if (check) {
-		std::cerr << check;
-	}
+    int check = serv_login((unsigned char*)login, (unsigned char*)password);
+    if (check) {
+        std::cerr << check;
+    }
 
-	return check == 0;
+    return check == 0;
 }
 
 bool Client::wrong_args(std::string& cmd, std::list<std::string>& t) {
 	// только по количесвту аргументов
 
 	if (cmd == "osversion" ||
-            cmd == "curtime" ||
+	        cmd == "curtime" ||
             cmd == "ostime" ||
             cmd == "memstat" ||
             cmd == "diskstype" ||
